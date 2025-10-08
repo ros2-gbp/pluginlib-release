@@ -1,4 +1,4 @@
-// Copyright (c) 2017, Open Source Robotics Foundation, Inc. All rights reserved.
+// Copyright (c) 2025, Metro Robots
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -26,30 +26,24 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef PLUGINLIB__IMPL__SPLIT_HPP_
-#define PLUGINLIB__IMPL__SPLIT_HPP_
+/* Author: David V. Lu!! */
 
-#include <regex>
-#include <string>
-#include <vector>
+#include <iostream>
+#include <pluginlib/class_loader.hpp>
 
-namespace pluginlib
+int main(int argc, char ** argv)
 {
-namespace impl
-{
+  if (argc != 3) {
+    std::cerr << "Requires two arguments!" << std::endl;
+    std::cerr << "Usage: " << argv[0];
+    std::cerr << " [package] [base_class]" << std::endl;
+    return -1;
+  }
 
-inline std::vector<std::string>
-split(const std::string & input, const std::string & regex)
-{
-  std::regex re(regex);
-  // the -1 will cause this to return the stuff between the matches, see the submatch argument:
-  //   http://en.cppreference.com/w/cpp/regex/regex_token_iterator/regex_token_iterator
-  std::sregex_token_iterator first(input.begin(), input.end(), re, -1);
-  std::sregex_token_iterator last;
-  return {first, last};  // vector will copy from first to last
+  // Note: You cannot use void if you want to use the templated createSharedInstance methods
+  pluginlib::ClassLoader<void> cl(argv[1], argv[2]);
+  for (const auto & declared : cl.getDeclaredClasses()) {
+    std::cout << declared << std::endl;
+  }
+  return 0;
 }
-
-}  // namespace impl
-}  // namespace pluginlib
-
-#endif  // PLUGINLIB__IMPL__SPLIT_HPP_
