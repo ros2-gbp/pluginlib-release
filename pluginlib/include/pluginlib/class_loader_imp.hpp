@@ -112,38 +112,6 @@ ClassLoader<T>::~ClassLoader()
     getBaseClassType().c_str(), static_cast<void *>(this));
 }
 
-
-template<class T>
-T * ClassLoader<T>::createClassInstance(const std::string & lookup_name, bool auto_load)
-/***************************************************************************/
-{
-  // Note: This method is deprecated
-  RCUTILS_LOG_DEBUG_NAMED("pluginlib.ClassLoader",
-    "In deprecated call createClassInstance(), lookup_name = %s, auto_load = %i.",
-    (lookup_name.c_str()), auto_load);
-
-  if (auto_load && !isClassLoaded(lookup_name)) {
-    RCUTILS_LOG_DEBUG_NAMED("pluginlib.ClassLoader",
-      "Autoloading class library before attempting to create instance.");
-    loadLibraryForClass(lookup_name);
-  }
-
-  try {
-    RCUTILS_LOG_DEBUG_NAMED("pluginlib.ClassLoader",
-      "Attempting to create instance through low-level MultiLibraryClassLoader...");
-    T * obj = lowlevel_class_loader_.createUnmanagedInstance<T>(getClassType(lookup_name));
-    RCUTILS_LOG_DEBUG_NAMED("pluginlib.ClassLoader",
-      "Instance created with object pointer = %p", static_cast<void *>(obj));
-
-    return obj;
-  } catch (const class_loader::CreateClassException & ex) {
-    RCUTILS_LOG_DEBUG_NAMED("pluginlib.ClassLoader",
-      "CreateClassException about to be raised for class %s",
-      lookup_name.c_str());
-    throw pluginlib::CreateClassException(ex.what());
-  }
-}
-
 template<class T>
 std::shared_ptr<T> ClassLoader<T>::createSharedInstance(const std::string & lookup_name)
 /***************************************************************************/
@@ -706,7 +674,7 @@ void ClassLoader<T>::processSingleXMLPluginFile(
     std::string library_path(path);
     if (0 == library_path.size()) {
       RCUTILS_LOG_ERROR_NAMED("pluginlib.ClassLoader",
-        "Failed to find Path Attirbute in library element in %s", xml_file.c_str());
+        "Failed to find Path Attribute in library element in %s", xml_file.c_str());
       continue;
     }
 
