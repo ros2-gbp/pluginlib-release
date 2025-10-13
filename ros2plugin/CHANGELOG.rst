@@ -2,13 +2,10 @@
 Changelog for package ros2plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.8.0 (2025-10-08)
+5.6.1 (2025-10-13)
 ------------------
-* Add ros2plugin (`#165 <https://github.com/ros/pluginlib/issues/165>`_)
-* Contributors: Jeremie Deray
-
-5.7.0 (2025-04-25)
-------------------
+* Add ros2plugin (backport `#165 <https://github.com/ros/pluginlib/issues/165>`_) (`#279 <https://github.com/ros/pluginlib/issues/279>`_)
+* Contributors: mergify[bot]
 
 5.6.0 (2024-12-20)
 ------------------
