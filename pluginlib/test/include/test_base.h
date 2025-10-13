@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Open Source Robotics Foundation, Inc.
+ * Copyright (c) 2012, Willow Garage, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,30 +27,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef PLUGINLIB__IMPL__SPLIT_HPP_
-#define PLUGINLIB__IMPL__SPLIT_HPP_
+#ifndef TEST_PLUGINLIB_FIXTURE__TEST_BASE_H_
+#define TEST_PLUGINLIB_FIXTURE__TEST_BASE_H_
 
-#include <regex>
-#include <string>
-#include <vector>
+#include <visibility_control.hpp>
 
-namespace pluginlib
+namespace test_base
 {
-namespace impl
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Fubar
 {
+public:
+  virtual void initialize(double foo) = 0;
+  virtual double result() = 0;
+  virtual ~Fubar() {}
 
-inline std::vector<std::string>
-split(const std::string & input, const std::string & regex)
-{
-  std::regex re(regex);
-  // the -1 will cause this to return the stuff between the matches, see the submatch argument:
-  //   http://en.cppreference.com/w/cpp/regex/regex_token_iterator/regex_token_iterator
-  std::sregex_token_iterator first(input.begin(), input.end(), re, -1);
-  std::sregex_token_iterator last;
-  return {first, last};  // vector will copy from first to last
-}
-
-}  // namespace impl
-}  // namespace pluginlib
-
-#endif  // PLUGINLIB__IMPL__SPLIT_HPP_
+protected:
+  Fubar() {}
+};
+}  // namespace test_base
+#endif  // TEST_BASE_H_
