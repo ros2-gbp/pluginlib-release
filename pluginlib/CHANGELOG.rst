@@ -2,49 +2,19 @@
 Changelog for package pluginlib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-5.4.4 (2025-11-28)
+5.1.3 (2025-11-28)
 ------------------
 
-5.4.3 (2025-10-13)
+5.1.2 (2025-10-13)
 ------------------
-* Fixed test_pluginlib maintainer and license (`#282 <https://github.com/ros/pluginlib/issues/282>`_)
-* List plugins script (backport `#264 <https://github.com/ros/pluginlib/issues/264>`_) (`#277 <https://github.com/ros/pluginlib/issues/277>`_)
+* List plugins script (backport `#264 <https://github.com/ros/pluginlib/issues/264>`_) (`#278 <https://github.com/ros/pluginlib/issues/278>`_)
+* Fixed test_pluginlib maintainer and license (`#283 <https://github.com/ros/pluginlib/issues/283>`_)
 * Contributors: Alejandro Hernández Cordero, mergify[bot]
 
-5.4.2 (2024-03-28)
+5.1.1 (2025-03-25)
 ------------------
-* Switch from rcpputils::fs to std::filesystem (`#254 <https://github.com/ros/pluginlib/issues/254>`_)
-* Contributors: Christophe Bedard
-
-5.4.1 (2024-01-24)
-------------------
-* Remove redundant throw of a std::runtime_error (`#232 <https://github.com/ros/pluginlib/issues/232>`_)
-* Contributors: Hunter L. Allen
-
-5.4.0 (2023-12-26)
-------------------
-* Update to C++17 (`#251 <https://github.com/ros/pluginlib/issues/251>`_)
-* Contributors: Chris Lalancette
-
-5.3.1 (2023-11-06)
-------------------
-* Fix wShadow compile warning (`#250 <https://github.com/ros/pluginlib/issues/250>`_)
-* Contributors: Steve Macenski
-
-5.3.0 (2023-04-28)
-------------------
-
-5.2.2 (2023-03-01)
-------------------
-* Update maintainers
-* Contributors: Audrow Nash
-
-5.2.1 (2022-09-13)
-------------------
-
-5.2.0 (2022-05-10)
-------------------
+* Fix wShadow compile warning (`#250 <https://github.com/ros/pluginlib/issues/250>`_) (`#266 <https://github.com/ros/pluginlib/issues/266>`_)
+* Contributors: Wiktor Bajor
 
 5.1.0 (2022-01-14)
 ------------------
