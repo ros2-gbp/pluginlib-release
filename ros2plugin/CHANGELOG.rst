@@ -2,18 +2,15 @@
 Changelog for package ros2plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.8.1 (2025-11-28)
+5.6.2 (2025-11-28)
 ------------------
-* Improve logging when unable to parse the plugin (`#285 <https://github.com/ros/pluginlib/issues/285>`_)
-* Contributors: mini-1235
+* Improve logging when unable to parse the plugin (`#285 <https://github.com/ros/pluginlib/issues/285>`_) (`#286 <https://github.com/ros/pluginlib/issues/286>`_)
+* Contributors: mergify[bot]
 
-5.8.0 (2025-10-08)
+5.6.1 (2025-10-13)
 ------------------
-* Add ros2plugin (`#165 <https://github.com/ros/pluginlib/issues/165>`_)
-* Contributors: Jeremie Deray
-
-5.7.0 (2025-04-25)
-------------------
+* Add ros2plugin (backport `#165 <https://github.com/ros/pluginlib/issues/165>`_) (`#279 <https://github.com/ros/pluginlib/issues/279>`_)
+* Contributors: mergify[bot]
 
 5.6.0 (2024-12-20)
 ------------------
