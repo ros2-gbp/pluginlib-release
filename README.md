@@ -1,3 +1,28 @@
+## pluginlib (jazzy) - 5.4.4-1
+
+The packages in the `pluginlib` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy pluginlib` on `Fri, 28 Nov 2025 13:15:13 -0000`
+
+These packages were released:
+- `pluginlib`
+- `ros2plugin`
+
+Version of package(s) in repository `pluginlib`:
+
+- upstream repository: https://github.com/ros/pluginlib.git
+- release repository: https://github.com/ros2-gbp/pluginlib-release.git
+- rosdistro version: `5.4.3-1`
+- old version: `5.4.3-1`
+- new version: `5.4.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## pluginlib (kilted) - 5.6.2-1
 
 The packages in the `pluginlib` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted pluginlib` on `Fri, 28 Nov 2025 13:06:32 -0000`
