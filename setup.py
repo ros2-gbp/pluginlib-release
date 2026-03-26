@@ -5,7 +5,7 @@ package_name = 'ros2plugin'
 
 setup(
     name=package_name,
-    version='5.6.2',
+    version='5.6.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -18,8 +18,8 @@ setup(
     author_email='jeremie.deray@canonical.com',
     maintainer='Jeremie Deray',
     maintainer_email='jeremie.deray@canonical.com',
-    url='https://github.com/ros2/ros2cli/tree/master/ros2plugin',
-    download_url='https://github.com/ros2/ros2cli/releases',
+    url='https://github.com/ros/pluginlib',
+    download_url='https://github.com/ros/pluginlib/releases',
     keywords=[],
     classifiers=[
         'Environment :: Console',
