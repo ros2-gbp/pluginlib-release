@@ -1,4 +1,4 @@
-// Copyright (c) 2012, Willow Garage, Inc. All rights reserved.
+// Copyright (c) 2017, Open Source Robotics Foundation, Inc. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -26,9 +26,30 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <pluginlib/class_list_macros.hpp>
-#include <test_base.hpp>
-#include "test_plugins.hpp"
+#ifndef PLUGINLIB__IMPL__SPLIT_HPP_
+#define PLUGINLIB__IMPL__SPLIT_HPP_
 
-PLUGINLIB_EXPORT_CLASS(test_plugins::Foo, test_base::Fubar)
-PLUGINLIB_EXPORT_CLASS(test_plugins::Bar, test_base::Fubar)
+#include <regex>
+#include <string>
+#include <vector>
+
+namespace pluginlib
+{
+namespace impl
+{
+
+inline std::vector<std::string>
+split(const std::string & input, const std::string & regex)
+{
+  std::regex re(regex);
+  // the -1 will cause this to return the stuff between the matches, see the submatch argument:
+  //   http://en.cppreference.com/w/cpp/regex/regex_token_iterator/regex_token_iterator
+  std::sregex_token_iterator first(input.begin(), input.end(), re, -1);
+  std::sregex_token_iterator last;
+  return {first, last};  // vector will copy from first to last
+}
+
+}  // namespace impl
+}  // namespace pluginlib
+
+#endif  // PLUGINLIB__IMPL__SPLIT_HPP_

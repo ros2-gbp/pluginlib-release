@@ -2,34 +2,18 @@
 Changelog for package pluginlib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.8.4 (2026-03-26)
-------------------
-* Fix some minor issues (`#292 <https://github.com/ros/pluginlib/issues/292>`_)
-* Contributors: Alejandro Hernández Cordero
-
-5.8.3 (2026-02-23)
-------------------
-* Add support for passing arguments to constructors (`#291 <https://github.com/ros/pluginlib/issues/291>`_)
-* Export includes (`#290 <https://github.com/ros/pluginlib/issues/290>`_)
-* Contributors: Alejandro Hernández Cordero, pum1k
-
-5.8.2 (2025-12-23)
-------------------
-* Updated deprecated ament_index_cpp API (`#289 <https://github.com/ros/pluginlib/issues/289>`_)
-* Contributors: Alejandro Hernández Cordero
-
-5.8.1 (2025-11-28)
+5.6.3 (2026-03-26)
 ------------------
 
-5.8.0 (2025-10-08)
+5.6.2 (2025-11-28)
 ------------------
-* refactor: replace regex with find_last_of to split plugin name (`#271 <https://github.com/ros/pluginlib/issues/271>`_)
-* Removed tinyxml2_vendor dependency (`#274 <https://github.com/ros/pluginlib/issues/274>`_)
-* Add ros2plugin (`#165 <https://github.com/ros/pluginlib/issues/165>`_)
-* Contributors: Alejandro Hernández Cordero, Jeremie Deray, ipa-fez
 
-5.7.0 (2025-04-25)
+5.6.1 (2025-10-13)
 ------------------
+* Add ros2plugin (backport `#165 <https://github.com/ros/pluginlib/issues/165>`_) (`#279 <https://github.com/ros/pluginlib/issues/279>`_)
+* List plugins script (backport `#264 <https://github.com/ros/pluginlib/issues/264>`_) (`#276 <https://github.com/ros/pluginlib/issues/276>`_)
+* fix cmake deprecation (backport `#273 <https://github.com/ros/pluginlib/issues/273>`_) (`#275 <https://github.com/ros/pluginlib/issues/275>`_)
+* Contributors: mergify[bot]
 
 5.6.0 (2024-12-20)
 ------------------
