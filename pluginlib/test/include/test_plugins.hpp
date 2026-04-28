@@ -1,4 +1,4 @@
-// Copyright 2008, Willow Garage, Inc. All rights reserved.
+// Copyright (c) 2012, Willow Garage, Inc. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -26,18 +26,74 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef PLUGINLIB__CLASS_LIST_MACROS_HPP_
-#define PLUGINLIB__CLASS_LIST_MACROS_HPP_
+#ifndef TEST_PLUGINS_HPP_
+#define TEST_PLUGINS_HPP_
 
-#include <class_loader/class_loader.hpp>
+#include <cmath>
+#include <memory>
 
-/// Register a class with class loader to effectively export it for plugin loading later.
-/**
- * \def PLUGINLIB_EXPORT_CLASS(class_type, base_class_type)
- * \param class_type The real class name with namespace qualifier (e.g. Animals::Lion)
- * \param base_class_type The real base class type from which class_type inherits
- */
-#define PLUGINLIB_EXPORT_CLASS(class_type, base_class_type) \
-  CLASS_LOADER_REGISTER_CLASS(class_type, base_class_type)
+#include <test_base.hpp>
+#include <visibility_control.hpp>
 
-#endif  // PLUGINLIB__CLASS_LIST_MACROS_HPP_
+namespace test_plugins
+{
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Bar : public test_base::Fubar
+{
+public:
+  Bar() {}
+
+  void initialize(double foo)
+  {
+    foo_ = foo;
+  }
+
+  double result()
+  {
+    return 0.5 * foo_ * getBar();
+  }
+
+  double getBar()
+  {
+    return sqrt((foo_ * foo_) - ((foo_ / 2) * (foo_ / 2)));
+  }
+
+private:
+  double foo_;
+};
+
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Foo : public test_base::Fubar
+{
+public:
+  Foo() {}
+
+  void initialize(double foo)
+  {
+    foo_ = foo;
+  }
+
+  double result()
+  {
+    return foo_ * foo_;
+  }
+
+private:
+  double foo_;
+};
+
+class TEST_PLUGINLIB_FIXTURE_PUBLIC FooWithCtor : public test_base::FubarWithCtor
+{
+public:
+  explicit FooWithCtor(std::unique_ptr<double> foo)
+  : foo_(*foo) {}
+
+  double result() override
+  {
+    return foo_ * foo_;
+  }
+
+private:
+  double foo_;
+};
+}  // namespace test_plugins
+
+#endif  // TEST_PLUGINS_HPP_

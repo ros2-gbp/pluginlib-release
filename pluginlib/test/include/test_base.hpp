@@ -1,4 +1,4 @@
-// Copyright 2008, Willow Garage, Inc. All rights reserved.
+// Copyright (c) 2012, Willow Garage, Inc. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -26,18 +26,53 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef PLUGINLIB__CLASS_LIST_MACROS_HPP_
-#define PLUGINLIB__CLASS_LIST_MACROS_HPP_
+#ifndef TEST_BASE_HPP_
+#define TEST_BASE_HPP_
 
-#include <class_loader/class_loader.hpp>
+#include <memory>
 
-/// Register a class with class loader to effectively export it for plugin loading later.
-/**
- * \def PLUGINLIB_EXPORT_CLASS(class_type, base_class_type)
- * \param class_type The real class name with namespace qualifier (e.g. Animals::Lion)
- * \param base_class_type The real base class type from which class_type inherits
- */
-#define PLUGINLIB_EXPORT_CLASS(class_type, base_class_type) \
-  CLASS_LOADER_REGISTER_CLASS(class_type, base_class_type)
+#include <visibility_control.hpp>
+#include <class_loader/interface_traits.hpp>
 
-#endif  // PLUGINLIB__CLASS_LIST_MACROS_HPP_
+namespace test_base
+{
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Fubar
+{
+public:
+  virtual void initialize(double foo) = 0;
+  virtual double result() = 0;
+  virtual ~Fubar() {}
+
+protected:
+  Fubar() {}
+};
+
+class TEST_PLUGINLIB_FIXTURE_PUBLIC FubarWithCtor
+{
+public:
+  virtual double result() = 0;
+  virtual ~FubarWithCtor() = default;
+
+protected:
+  FubarWithCtor() = default;
+};
+}  // namespace test_base
+
+template<>
+struct class_loader::InterfaceTraits<test_base::FubarWithCtor>
+{
+  // Using `std::unique_ptr<double>` to test forwarding of move-only types.
+  using constructor_parameters = class_loader::ConstructorParameters<std::unique_ptr<double>>;
+};
+
+static_assert(
+  class_loader::is_interface_constructible_v<test_base::FubarWithCtor, std::unique_ptr<double>>,
+  "BaseWithInterfaceCtor should be interface constructible with the specifed types."
+);
+
+static_assert(
+  class_loader::is_interface_constructible_v<test_base::FubarWithCtor, std::unique_ptr<double>&&>,
+  "BaseWithInterfaceCtor should be interface constructible with the specifed types."
+);
+
+#endif  // TEST_BASE_HPP_
