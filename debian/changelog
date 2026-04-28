@@ -1,0 +1,436 @@
+ros-rolling-ros2plugin (5.8.4-2resolute) resolute; urgency=high
+
+  * Implement package option (#293 <https://github.com/ros/pluginlib/issues/293>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 26 Mar 2026 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.8.3-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 23 Feb 2026 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.8.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 23 Dec 2025 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.8.1-2resolute) resolute; urgency=high
+
+  * Improve logging when unable to parse the plugin (#285 <https://github.com/ros/pluginlib/issues/285>)
+  * Contributors: mini-1235
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 28 Nov 2025 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.8.0-2resolute) resolute; urgency=high
+
+  * Add ros2plugin (#165 <https://github.com/ros/pluginlib/issues/165>)
+  * Contributors: Jeremie Deray
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 08 Oct 2025 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.7.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 25 Apr 2025 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.6.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 20 Dec 2024 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.5.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 20 Nov 2024 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.5.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 08 Jul 2024 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.5.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 26 Apr 2024 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.4.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 28 Mar 2024 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.4.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 24 Jan 2024 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.4.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 26 Dec 2023 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.3.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 06 Nov 2023 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.3.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 28 Apr 2023 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.2.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 01 Mar 2023 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.2.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 13 Sep 2022 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.2.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 10 May 2022 05:00:00 -0000
+
+ros-rolling-ros2plugin (5.1.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 14 Jan 2022 06:00:00 -0000
+
+ros-rolling-ros2plugin (5.0.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 25 Jan 2021 06:00:00 -0000
+
+ros-rolling-ros2plugin (4.1.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 08 Dec 2020 06:00:00 -0000
+
+ros-rolling-ros2plugin (4.1.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 27 Aug 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (4.1.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 25 Aug 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (4.0.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 06 Aug 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.5.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 26 May 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.5.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 07 May 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.5.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Sat, 25 Apr 2020 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.4.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 23 Oct 2019 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.4.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 18 Sep 2019 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.3.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 08 May 2019 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.3.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Sun, 14 Apr 2019 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.2.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 12 Dec 2018 06:00:00 -0000
+
+ros-rolling-ros2plugin (2.2.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 20 Nov 2018 06:00:00 -0000
+
+ros-rolling-ros2plugin (2.1.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 17 Jul 2018 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.1.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 21 Jun 2018 05:00:00 -0000
+
+ros-rolling-ros2plugin (2.0.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 08 Dec 2017 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.11.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 27 Jul 2017 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.5-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 27 Mar 2017 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.4-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 20 Sep 2016 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.3-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 22 Jun 2016 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 14 Mar 2016 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 23 Dec 2014 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.10.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 08 May 2014 19:56:00 -0000
+
+ros-rolling-ros2plugin (1.9.25-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 09 May 2014 01:37:00 -0000
+
+ros-rolling-ros2plugin (1.9.24-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 11 Mar 2014 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.23-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 04 Oct 2013 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.22-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 21 Aug 2013 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.21-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Sun, 14 Jul 2013 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.20-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 18 Apr 2013 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.19-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Sat, 23 Mar 2013 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.18-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 28 Jan 2013 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.17-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 27 Dec 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.16-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 21 Dec 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.15-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 13 Dec 2012 23:22:00 -0000
+
+ros-rolling-ros2plugin (1.9.14-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 13 Dec 2012 21:20:00 -0000
+
+ros-rolling-ros2plugin (1.9.13-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 11 Dec 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.12-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 06 Dec 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.11-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 26 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.10-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 21 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.9-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 16 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.8-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 14 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.7-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 08 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.6-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 07 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.5-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 06 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.4-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Mon, 05 Nov 2012 06:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.3-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 31 Oct 2012 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 25 Oct 2012 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.9.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 25 Oct 2012 03:02:00 -0000
+
+ros-rolling-ros2plugin (1.9.0-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Wed, 24 Oct 2012 23:31:00 -0000
+
+ros-rolling-ros2plugin (1.8.3-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Fri, 07 Sep 2012 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.8.2-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Thu, 06 Sep 2012 05:00:00 -0000
+
+ros-rolling-ros2plugin (1.8.1-2resolute) resolute; urgency=high
+
+
+
+ -- Jeremie Deray <jeremie.deray@canonical.com>  Tue, 04 Sep 2012 05:00:00 -0000
+
+
