@@ -34,7 +34,6 @@
 #include <string>
 #include <vector>
 
-#include "class_loader/interface_traits.hpp"
 #include "class_loader/multi_library_class_loader.hpp"
 #include "pluginlib/class_desc.hpp"
 #include "pluginlib/class_loader_base.hpp"
@@ -54,10 +53,11 @@ class ClassLoader : public ClassLoaderBase
 public:
   typedef typename std::map<std::string, ClassDesc>::iterator ClassMapIterator;
 
+public:
   /**
    * \param package The package containing the base class
    * \param base_class The type of the base class for classes to be loaded
-   * \param attrib_name The attribute to search for in manifest.xml files, defaults to "plugin"
+   * \param attrib_name The attribute to search for in manifext.xml files, defaults to "plugin"
    * \param plugin_xml_paths The list of paths of plugin.xml files, defaults to be crawled via
    *   ros::package::getPlugins()
    * \throws pluginlib::ClassLoaderException if package manifest cannot be found
@@ -77,16 +77,12 @@ public:
    * Deleting the instance and calling unloadLibraryForClass() is automatically
    * handled by the shared pointer.
    * \param lookup_name The name of the class to load
-   * \param args Arguments passed to the constructor of the plugin.
-   *   Plugin parameters must be declared using class_loader::InterfaceTraits.
    * \throws pluginlib::LibraryLoadException when the library associated with
    *   the class cannot be loaded
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args,
-    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
-  std::shared_ptr<T> createSharedInstance(const std::string & lookup_name, Args && ... args);
+  std::shared_ptr<T> createSharedInstance(const std::string & lookup_name);
 
   /// Create an instance of a desired class.
   /**
@@ -99,16 +95,12 @@ public:
    * deleter when you want to destroy the released pointer.
    *
    * \param lookup_name The name of the class to load.
-   * \param args Arguments passed to the constructor of the plugin.
-   *   Plugin parameters must be declared using class_loader::InterfaceTraits.
    * \throws pluginlib::LibraryLoadException when the library associated with
    *   the class cannot be loaded.
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args,
-    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
-  UniquePtr<T> createUniqueInstance(const std::string & lookup_name, Args && ... args);
+  UniquePtr<T> createUniqueInstance(const std::string & lookup_name);
 
   /// Create an instance of a desired class.
   /**
@@ -119,16 +111,12 @@ public:
    *   (in order to decrement the associated library counter and unloading it
    *   if it is no more used).
    * \param lookup_name The name of the class to load
-   * \param args Arguments passed to the constructor of the plugin.
-   *   Plugin parameters must be declared using class_loader::InterfaceTraits.
    * \throws pluginlib::LibraryLoadException when the library associated with
    *   the class cannot be loaded
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args,
-    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
-  T * createUnmanagedInstance(const std::string & lookup_name, Args && ... args);
+  T * createUnmanagedInstance(const std::string & lookup_name);
 
   /// Return a list of all available plugin manifest paths for this ClassLoader's base class type.
   /**

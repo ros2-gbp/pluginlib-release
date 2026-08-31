@@ -29,8 +29,8 @@
 #ifndef PLUGINLIB__CLASS_LOADER_BASE_HPP_
 #define PLUGINLIB__CLASS_LOADER_BASE_HPP_
 
-#include <string>
 #include <vector>
+#include <string>
 
 namespace pluginlib
 {
