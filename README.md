@@ -1,3 +1,28 @@
+## pluginlib (rolling) - 6.0.2-1
+
+The packages in the `pluginlib` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling pluginlib` on `Mon, 31 Aug 2026 15:51:42 -0000`
+
+These packages were released:
+- `pluginlib`
+- `ros2plugin`
+
+Version of package(s) in repository `pluginlib`:
+
+- upstream repository: https://github.com/ros/pluginlib.git
+- release repository: https://github.com/ros2-gbp/pluginlib-release.git
+- rosdistro version: `6.0.1-1`
+- old version: `6.0.1-1`
+- new version: `6.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## pluginlib (rolling) - 6.0.1-1
 
 The packages in the `pluginlib` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling pluginlib` on `Tue, 28 Jul 2026 09:09:22 -0000`
