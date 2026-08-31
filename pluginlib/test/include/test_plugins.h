@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Open Source Robotics Foundation, Inc.
+ * Copyright (c) 2012, Willow Garage, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,30 +27,57 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef PLUGINLIB__IMPL__SPLIT_HPP_
-#define PLUGINLIB__IMPL__SPLIT_HPP_
+#ifndef TEST_PLUGINS_H_
+#define TEST_PLUGINS_H_
 
-#include <regex>
-#include <string>
-#include <vector>
+#include <cmath>
 
-namespace pluginlib
+#include <test_base.h>
+#include <visibility_control.hpp>
+
+namespace test_plugins
 {
-namespace impl
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Bar : public test_base::Fubar
 {
+public:
+  Bar() {}
 
-inline std::vector<std::string>
-split(const std::string & input, const std::string & regex)
+  void initialize(double foo)
+  {
+    foo_ = foo;
+  }
+
+  double result()
+  {
+    return 0.5 * foo_ * getBar();
+  }
+
+  double getBar()
+  {
+    return sqrt((foo_ * foo_) - ((foo_ / 2) * (foo_ / 2)));
+  }
+
+private:
+  double foo_;
+};
+
+class TEST_PLUGINLIB_FIXTURE_PUBLIC Foo : public test_base::Fubar
 {
-  std::regex re(regex);
-  // the -1 will cause this to return the stuff between the matches, see the submatch argument:
-  //   http://en.cppreference.com/w/cpp/regex/regex_token_iterator/regex_token_iterator
-  std::sregex_token_iterator first(input.begin(), input.end(), re, -1);
-  std::sregex_token_iterator last;
-  return {first, last};  // vector will copy from first to last
-}
+public:
+  Foo() {}
 
-}  // namespace impl
-}  // namespace pluginlib
+  void initialize(double foo)
+  {
+    foo_ = foo;
+  }
 
-#endif  // PLUGINLIB__IMPL__SPLIT_HPP_
+  double result()
+  {
+    return foo_ * foo_;
+  }
+
+private:
+  double foo_;
+};
+}  // namespace test_plugins
+#endif  // TEST_PLUGINS_H_
