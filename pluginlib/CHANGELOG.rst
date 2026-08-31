@@ -2,20 +2,11 @@
 Changelog for package pluginlib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-6.0.2 (2026-08-31)
+5.8.5 (2026-08-31)
 ------------------
-* Fix pluginlib_enable_plugin_testing() docstring pitfalls. (`#305 <https://github.com/ros/pluginlib/issues/305>`_)
-* Contributors: Chris Lalancette
-
-6.0.1 (2026-07-28)
-------------------
-* std::format, concepts, range-for using and string_view (`#298 <https://github.com/ros/pluginlib/issues/298>`_)
-* use C++ 20 in default (`#297 <https://github.com/ros/pluginlib/issues/297>`_)
-* Removed dead code (`#299 <https://github.com/ros/pluginlib/issues/299>`_)
-* Contributors: Alejandro Hernández Cordero
-
-6.0.0 (2026-05-06)
-------------------
+* Fix pluginlib_enable_plugin_testing() docstring pitfalls. (`#305 <https://github.com/ros/pluginlib/issues/305>`_) (`#306 <https://github.com/ros/pluginlib/issues/306>`_)
+* Removed dead code (`#299 <https://github.com/ros/pluginlib/issues/299>`_) (`#301 <https://github.com/ros/pluginlib/issues/301>`_)
+* Contributors: Alejandro Hernández Cordero, mergify[bot]
 
 5.8.4 (2026-03-26)
 ------------------

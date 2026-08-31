@@ -52,7 +52,7 @@ template<class T>
 class ClassLoader : public ClassLoaderBase
 {
 public:
-  using ClassMapIterator = typename std::map<std::string, ClassDesc>::iterator;
+  typedef typename std::map<std::string, ClassDesc>::iterator ClassMapIterator;
 
   /**
    * \param package The package containing the base class
@@ -84,8 +84,8 @@ public:
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args>
-  requires class_loader::InterfaceConstructible<T, Args...>
+  template<typename ... Args,
+    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
   std::shared_ptr<T> createSharedInstance(const std::string & lookup_name, Args && ... args);
 
   /// Create an instance of a desired class.
@@ -106,8 +106,8 @@ public:
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args>
-  requires class_loader::InterfaceConstructible<T, Args...>
+  template<typename ... Args,
+    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
   UniquePtr<T> createUniqueInstance(const std::string & lookup_name, Args && ... args);
 
   /// Create an instance of a desired class.
@@ -126,8 +126,8 @@ public:
    * \throws pluginlib::CreateClassException when the class cannot be instantiated
    * \return An instance of the class
    */
-  template<typename ... Args>
-  requires class_loader::InterfaceConstructible<T, Args...>
+  template<typename ... Args,
+    std::enable_if_t<class_loader::is_interface_constructible_v<T, Args...>, bool> = true>
   T * createUnmanagedInstance(const std::string & lookup_name, Args && ... args);
 
   /// Return a list of all available plugin manifest paths for this ClassLoader's base class type.
