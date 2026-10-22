@@ -2,25 +2,79 @@
 Changelog for package ros2plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.1.5 (2026-08-31)
+6.0.3 (2026-10-22)
+------------------
+* Clean ros2plugin dependencies (`#310 <https://github.com/ros/pluginlib/issues/310>`_)
+* Use the SPDX identifier Apache-2.0 in license declarations (`#311 <https://github.com/ros/pluginlib/issues/311>`_)
+* Contributors: Alejandro Hernández Cordero, Michael Carroll
+
+6.0.2 (2026-08-31)
 ------------------
 
-5.1.4 (2026-03-26)
+6.0.1 (2026-07-06)
 ------------------
-* Implement package option (`#293 <https://github.com/ros/pluginlib/issues/293>`_) (`#296 <https://github.com/ros/pluginlib/issues/296>`_)
-* Contributors: mergify[bot]
 
-5.1.3 (2025-11-28)
+6.0.0 (2026-05-06)
 ------------------
-* Improve logging when unable to parse the plugin (`#285 <https://github.com/ros/pluginlib/issues/285>`_) (`#288 <https://github.com/ros/pluginlib/issues/288>`_)
-* Contributors: mergify[bot]
 
-5.1.2 (2025-10-13)
+5.8.4 (2026-03-26)
 ------------------
-* Add ros2plugin (backport `#165 <https://github.com/ros/pluginlib/issues/165>`_) (`#281 <https://github.com/ros/pluginlib/issues/281>`_)
-* Contributors: mergify[bot]
+* Implement package option (`#293 <https://github.com/ros/pluginlib/issues/293>`_)
+* Contributors: Alejandro Hernández Cordero
 
-5.1.1 (2025-03-25)
+5.8.3 (2026-02-23)
+------------------
+
+5.8.2 (2025-12-23)
+------------------
+
+5.8.1 (2025-11-28)
+------------------
+* Improve logging when unable to parse the plugin (`#285 <https://github.com/ros/pluginlib/issues/285>`_)
+* Contributors: mini-1235
+
+5.8.0 (2025-10-08)
+------------------
+* Add ros2plugin (`#165 <https://github.com/ros/pluginlib/issues/165>`_)
+* Contributors: Jeremie Deray
+
+5.7.0 (2025-04-25)
+------------------
+
+5.6.0 (2024-12-20)
+------------------
+
+5.5.2 (2024-11-20)
+------------------
+
+5.5.1 (2024-07-08)
+------------------
+
+5.5.0 (2024-04-26)
+------------------
+
+5.4.2 (2024-03-28)
+------------------
+
+5.4.1 (2024-01-24)
+------------------
+
+5.4.0 (2023-12-26)
+------------------
+
+5.3.1 (2023-11-06)
+------------------
+
+5.3.0 (2023-04-28)
+------------------
+
+5.2.2 (2023-03-01)
+------------------
+
+5.2.1 (2022-09-13)
+------------------
+
+5.2.0 (2022-05-10)
 ------------------
 
 5.1.0 (2022-01-14)

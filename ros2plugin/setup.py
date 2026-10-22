@@ -5,7 +5,7 @@ package_name = 'ros2plugin'
 
 setup(
     name=package_name,
-    version='5.1.5',
+    version='6.0.3',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -29,7 +29,7 @@ setup(
     description='The plugin command for ROS 2 command line tools.',
     long_description="""\
 The package provides the plugin command for the ROS 2 command line tools.""",
-    license='Apache License, Version 2.0',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',

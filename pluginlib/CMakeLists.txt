@@ -1,28 +1,24 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(pluginlib)
 
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
-
-if(NOT WIN32)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_ros_core REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(class_loader REQUIRED)
 find_package(rcutils REQUIRED)
 find_package(rcpputils REQUIRED)
-find_package(tinyxml2_vendor REQUIRED)
-find_package(TinyXML2 REQUIRED)  # provided by tinyxml2 upstream, or tinyxml2_vendor
+find_package(TinyXML2 REQUIRED)
 
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
 target_link_libraries(${PROJECT_NAME} INTERFACE
+  ament_cmake_ros_core::ament_ros_defaults
   ament_index_cpp::ament_index_cpp
   class_loader::class_loader
   rcutils::rcutils
@@ -41,8 +37,13 @@ install(TARGETS list_plugins
         DESTINATION lib/${PROJECT_NAME}
 )
 
-ament_export_dependencies(ament_index_cpp class_loader rcutils rcpputils tinyxml2_vendor TinyXML2)
+ament_export_dependencies(
+  ament_cmake_ros_core ament_index_cpp class_loader rcutils rcpputils TinyXML2)
 
+# Export old-style CMake variables
+ament_export_include_directories("include/${PROJECT_NAME}")
+
+# Export modern CMake targets
 ament_export_targets(export_${PROJECT_NAME})
 
 install(
@@ -57,12 +58,15 @@ install(
 install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 if(BUILD_TESTING)
-  find_package(ament_cmake_gtest REQUIRED)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
 
-  include_directories(include test/include)
+  find_package(ament_cmake_gtest REQUIRED)
 
   add_library(test_plugins SHARED ./test/test_plugins.cpp)
   target_compile_definitions(test_plugins PRIVATE "TEST_PLUGINLIB_FIXTURE_BUILDING_LIBRARY")
+  target_include_directories(test_plugins PRIVATE
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/test/include>")
   target_link_libraries(test_plugins ${PROJECT_NAME})
 
   include("cmake/pluginlib_enable_plugin_testing.cmake")
@@ -83,6 +87,8 @@ if(BUILD_TESTING)
   )
   if(TARGET ${PROJECT_NAME}_unique_ptr_test)
     target_link_libraries(${PROJECT_NAME}_unique_ptr_test ${PROJECT_NAME})
+    target_include_directories(${PROJECT_NAME}_unique_ptr_test PRIVATE
+      "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/test/include>")
     add_dependencies(${PROJECT_NAME}_unique_ptr_test "${mock_install_target}")
   endif()
 
@@ -95,6 +101,8 @@ if(BUILD_TESTING)
     #   rcutils::rcutils
     target_link_libraries(${PROJECT_NAME}_utest ${PROJECT_NAME})
     add_dependencies(${PROJECT_NAME}_utest "${mock_install_target}")
+    target_include_directories(${PROJECT_NAME}_utest PRIVATE
+      "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/test/include>")
   endif()
 
 endif()
